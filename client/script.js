@@ -84,16 +84,20 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
-  const response = await fetch('https://tiyan-ai.onrender.com', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': 'https://tiyan-ai.onrender.com',
-    },
-    body: JSON.stringify({
-      prompt: data.get('prompt'),
-    }),
-  });
+  const response = await fetch(
+    'https://sea-turtle-app-pma4j.ondigitalocean.app/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin':
+          'https://sea-turtle-app-pma4j.ondigitalocean.app/',
+      },
+      body: JSON.stringify({
+        prompt: data.get('prompt'),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = ' ';
