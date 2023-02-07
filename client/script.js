@@ -48,19 +48,17 @@ function chatStripe(isAi, value, uniqueId) {
   return `
         <div class="wrapper ${isAi ? 'ai' : 'user'}">
             <div class="chat">
-                <div class="profile">
+                <div class="profile ${isAi ? '' : 'hide'}">
                     <img 
                       src=${isAi ? bot : ''} 
                       alt=${isAi ? 'bot' : ''}
-                      class=${isAi ? '' : 'hide'}
                     />
                 </div>
                 <div class="message" id=${uniqueId}>${value}</div>
-                <div class="profile">
+                <div class="profile ${isAi ? 'hide' : ''}">
                     <img 
                       src=${isAi ? '' : user} 
                       alt=${isAi ? '' : user}
-                      class=${isAi ? 'hide' : ''}
                     />
                 </div>
             </div>

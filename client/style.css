@@ -157,3 +157,9 @@ form img {
   width: 30px;
   height: 30px;
 }
+
+.notes {
+  color: #636363;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
