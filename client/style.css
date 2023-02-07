@@ -68,6 +68,10 @@ body {
   gap: 10px;
 }
 
+.hide {
+  display: none;
+}
+
 .profile {
   width: 36px;
   height: 36px;
